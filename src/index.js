@@ -18,7 +18,8 @@ export default class MasonryInfiniteScroller extends Component {
     sizes: PropTypes.array,
     style: PropTypes.object,
     threshold: PropTypes.number,
-    useWindow: PropTypes.bool
+    useWindow: PropTypes.bool,
+    useCapture: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -31,6 +32,7 @@ export default class MasonryInfiniteScroller extends Component {
       { mq: '768px', columns: 2, gutter: 20 },
       { mq: '1024px', columns: 3, gutter: 20 }
     ],
+    useCapture: true,
     style: {}
   }
 
@@ -105,7 +107,8 @@ export default class MasonryInfiniteScroller extends Component {
       pageStart,
       style,
       threshold,
-      useWindow
+      useWindow,
+      useCapture
     } = this.props;
 
     return (
@@ -117,6 +120,7 @@ export default class MasonryInfiniteScroller extends Component {
         pageStart={pageStart}
         threshold={threshold}
         useWindow={useWindow}
+        useCapture={useCapture}
       >
         <div ref={this.setContainerRef} className={className} style={style}>
           {children}
