@@ -30,7 +30,7 @@
   "dependencies": {
     "bricks.js": "^1.7.0",
     "prop-types": "^15.5.10",
-    "react-infinite-scroller": "^1.0.12"
+    "react-infinite-scroller": "^1.0.14"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
